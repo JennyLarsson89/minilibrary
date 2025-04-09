@@ -16,6 +16,7 @@ export function fetchBooks() {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             const books = yield response.json();
+            console.log('Fetched books:', books); // Lägg till denna logg för att se om böckerna hämtas korrekt
             return books;
         }
         catch (error) {
