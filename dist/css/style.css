@@ -152,7 +152,7 @@ h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #E7CDCD;
+    background: rgba(131, 25, 231, 0.748);
     transition: .5s;
     transform: scale(.9);
     z-index: -1;
@@ -160,7 +160,7 @@ h1 {
 
 .cover-1:hover::before {
     transform: scale(1.1);
-    box-shadow: 0 0 15px #E7CDCD;
+    box-shadow: 0 0 15px rgba(131, 25, 231, 0.748);
 }
 .cover-2 {
     background: linear-gradient(50deg, rgb(165, 42, 42), rgba(255, 255, 255, 0));  
@@ -176,7 +176,7 @@ h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #E7CDCD;
+    background: rgba(165, 42, 42, 0.789);
     transition: .5s;
     transform: scale(.9);
     z-index: -1;
@@ -184,7 +184,7 @@ h1 {
 
 .cover-2:hover::before {
     transform: scale(1.1);
-    box-shadow: 0 0 15px #E7CDCD;
+    box-shadow: 0 0 15px rgba(165, 42, 42, 0.789);
 }
 
 .cover-3 {
@@ -201,7 +201,7 @@ h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #E7CDCD;
+    background: rgba(255, 0, 0, 0.738);
     transition: .5s;
     transform: scale(.9);
     z-index: -1;
@@ -209,7 +209,7 @@ h1 {
 
 .cover-3:hover::before {
     transform: scale(1.1);
-    box-shadow: 0 0 15px #E7CDCD;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.738);
 }
 
 .cover-4 {
@@ -226,7 +226,7 @@ h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #E7CDCD;
+    background: rgba(0, 255, 38, 0.621);
     transition: .5s;
     transform: scale(.9);
     z-index: -1;
@@ -234,7 +234,7 @@ h1 {
 
 .cover-4:hover::before {
     transform: scale(1.1);
-    box-shadow: 0 0 15px #E7CDCD;
+    box-shadow: 0 0 15px rgba(0, 255, 38, 0.621);
 }
 
 .cover-5 {
@@ -251,7 +251,7 @@ h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #E7CDCD;
+    background: rgba(255, 255, 0, 0.702);
     transition: .5s;
     transform: scale(.9);
     z-index: -1;
@@ -259,7 +259,7 @@ h1 {
 
 .cover-5:hover::before {
     transform: scale(1.1);
-    box-shadow: 0 0 15px #E7CDCD;
+    box-shadow: 0 0 15px rgba(255, 255, 0, 0.702);
 }
 .cover-6 {
     background: linear-gradient(50deg, rgb(255, 166, 0), rgba(255, 255, 255, 0));
@@ -275,7 +275,7 @@ h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #E7CDCD;
+    background: rgba(255, 166, 0, 0.723);
     transition: .5s;
     transform: scale(.9);
     z-index: -1;
@@ -283,7 +283,7 @@ h1 {
 
 .cover-6:hover::before {
     transform: scale(1.1);
-    box-shadow: 0 0 15px #E7CDCD;
+    box-shadow: 0 0 15px rgba(255, 166, 0, 0.723);
 }
 
 .cover-7 {
@@ -300,7 +300,7 @@ h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #E7CDCD;
+    background: rgba(128, 128, 128, 0.814);
     transition: .5s;
     transform: scale(.9);
     z-index: -1;
@@ -308,7 +308,7 @@ h1 {
 
 .cover-7:hover::before {
     transform: scale(1.1);
-    box-shadow: 0 0 15px #E7CDCD;
+    box-shadow: 0 0 15px rgba(128, 128, 128, 0.814);
 }
 
 .cover-8  {
@@ -326,7 +326,7 @@ h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #E7CDCD;
+    background: #002afcb5;
     transition: .5s;
     transform: scale(.9);
     z-index: -1;
@@ -334,5 +334,5 @@ h1 {
 
 .cover-8:hover::before {
     transform: scale(1.1);
-    box-shadow: 0 0 15px #E7CDCD;
+    box-shadow: 0 0 15px #002afcb5;
 }
