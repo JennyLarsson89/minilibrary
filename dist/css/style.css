@@ -1,31 +1,45 @@
+/* basinställningar */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-     
+
 body {
     margin: 0;
     padding: 0;
-    background-color: rgb(255, 255, 255);
+    background-color: #fff;
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    justify-content: flex-start; 
+    align-items: center;
+    justify-content: flex-start;
     min-height: 100vh;
 }
 
 h1 {
-    margin: 1em  0;
+    margin: 1em 0;
     grid-column: 1 / -1;
     text-align: center;
 }
 
+h2 {
+    color: #000;
+    font-size: medium;
+    justify-self: flex-start;
+}
+
+p {
+    color: #000;
+    font-size: small;
+    justify-content: center;
+}
+
+/* knapp och input */
 .my-input,
 .search-button {
     grid-column: 1 / -1;
-    justify-self: center; 
+    justify-self: center;
     margin-bottom: 1em;
 }
 
@@ -40,7 +54,7 @@ h1 {
     font-size: 1rem;
     cursor: pointer;
     background-color: #007bffe1;
-    color: rgb(255, 255, 255);
+    color: #fff;
     border: none;
     border-radius: 5px;
 }
@@ -49,14 +63,16 @@ h1 {
     background-color: #0057b3f1;
 }
 
+/* Grid-wrapper */
 .wrapper {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 1rem; 
-    justify-content: center; 
-    max-width: 90%; 
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    justify-content: center;
+    max-width: 90%;
 }
 
+/* gemensamma inställning för bokomslag */
 .cover {
     position: relative;
     width: 13rem;
@@ -67,51 +83,8 @@ h1 {
     align-items: flex-end;
     padding: 1.5rem;
     margin: 3px;
-}
-
- h2 {
-    color: rgb(0, 0, 0);
-    font-size: medium;
-    justify-self: flex-start;
- }
-
-
- p {
-    color: rgb(0, 0, 0);
-   font-size: small;
-   justify-content: center;
- }
-
-.upclose {
-    padding: 1em;
-    width: 20em;  
-    min-height: 10em;
-    background: rgb(255, 255, 255);
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1000;
-}
-
-.info {
-    display: none; 
-    position: fixed;
-    top: 50%; 
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1000;
-    background: rgb(255, 255, 255);
-    padding: 20px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.274);
-    border-radius: 8px;
-    max-width: 80%;
-    width: auto;
-    height: auto;
-}
-
-.info.visible {
-    display: block;
+    overflow: hidden;
+    transition: all 0.3s ease;
 }
 
 .cover p {
@@ -125,214 +98,173 @@ h1 {
     -webkit-box-orient: vertical;
 }
 
-.bookinfo {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: rgb(0, 0, 0);
-    margin-top: 1em;
-    line-height: 1.4;
-    white-space: pre-wrap;
+.info {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.274);
+    border-radius: 8px;
+    max-width: 80%;
+    width: auto;
+    height: auto;
 }
+
+.info.visible {
+    display: block;
+}
+
+.upclose {
+    padding: 1em;
+    width: 20em;
+    min-height: 10em;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
 .upclose h3 {
- 
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 
-.cover-1 {
-    background: linear-gradient(50deg, rgb(131, 25, 231), rgba(255, 255, 255, 0));
+.bookinfo {
+    color: #000;
+    margin-top: 1em;
+    line-height: 1.4;
+    white-space: pre-wrap;
+}
+
+/* mobilanpassar sidan */
+@media (max-width: 768px) {
+    .wrapper {
+        grid-template-columns: 1fr 1fr; /* 2 kolumner på små skärmar */
+        gap: 0.5rem;
+    }
+
+    .info {
+        width: 90%;
+        padding: 15px;
+    }
+}
+
+/* Cover-stil: Gemensam bas */
+[class^="cover-"] {
     position: relative;
     line-height: 63px;
-    transition: .5s;
-} 
+    transition: 0.3s ease;
+    overflow: hidden;
+}
 
-.cover-1::before {
+[class^="cover-"]::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(131, 25, 231, 0.748);
-    transition: .5s;
-    transform: scale(.9);
+    transition: 0.3s ease;
+    transform: scale(0.9);
     z-index: -1;
 }
 
+/* böckernas färgtema */
+.cover-1 {
+    background: linear-gradient(50deg, rgb(131, 25, 231), transparent);
+}
+.cover-1::before {
+    background: rgba(131, 25, 231, 0.75);
+}
 .cover-1:hover::before {
     transform: scale(1.1);
-    box-shadow: 0 0 15px rgba(131, 25, 231, 0.748);
+    box-shadow: 0 0 5px rgba(131, 25, 231, 0.75);
 }
+
 .cover-2 {
-    background: linear-gradient(50deg, rgb(165, 42, 42), rgba(255, 255, 255, 0));  
-    position: relative;
-    line-height: 63px;
-    transition: .5s;
+    background: linear-gradient(50deg, brown, transparent);
 }
-
 .cover-2::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(165, 42, 42, 0.789);
-    transition: .5s;
-    transform: scale(.9);
-    z-index: -1;
+    background: rgba(165, 42, 42, 0.79);
 }
-
 .cover-2:hover::before {
     transform: scale(1.1);
-    box-shadow: 0 0 15px rgba(165, 42, 42, 0.789);
+    box-shadow: 0 0 5px rgba(165, 42, 42, 0.79);
 }
 
 .cover-3 {
-    background: linear-gradient(50deg, rgb(255, 0, 0), rgba(255, 255, 255, 0));
-    position: relative;
-    line-height: 63px;
-    transition: .5s;
+    background: linear-gradient(50deg, red, transparent);
 }
-
 .cover-3::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 0, 0, 0.738);
-    transition: .5s;
-    transform: scale(.9);
-    z-index: -1;
+    background: rgba(255, 0, 0, 0.74);
 }
-
 .cover-3:hover::before {
     transform: scale(1.1);
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.738);
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.74);
 }
 
 .cover-4 {
-    background: linear-gradient(50deg, rgb(0, 255, 38), rgba(255, 255, 255, 0));
-    position: relative;
-    line-height: 63px;
-    transition: .5s;
+    background: linear-gradient(50deg, lime, transparent);
 }
-
 .cover-4::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 255, 38, 0.621);
-    transition: .5s;
-    transform: scale(.9);
-    z-index: -1;
+    background: rgba(0, 255, 38, 0.62);
 }
-
 .cover-4:hover::before {
     transform: scale(1.1);
-    box-shadow: 0 0 15px rgba(0, 255, 38, 0.621);
+    box-shadow: 0 0 5px rgba(0, 255, 38, 0.62);
 }
 
 .cover-5 {
-    background: linear-gradient(50deg, rgb(255, 255, 0), rgba(255, 255, 255, 0));
-    position: relative;
-    line-height: 63px;
-    transition: .5s;
+    background: linear-gradient(50deg, yellow, transparent);
 }
-
 .cover-5::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 0, 0.702);
-    transition: .5s;
-    transform: scale(.9);
-    z-index: -1;
+    background: rgba(255, 255, 0, 0.7);
 }
-
 .cover-5:hover::before {
     transform: scale(1.1);
-    box-shadow: 0 0 15px rgba(255, 255, 0, 0.702);
+    box-shadow: 0 0 5px rgba(255, 255, 0, 0.7);
 }
+
 .cover-6 {
-    background: linear-gradient(50deg, rgb(255, 166, 0), rgba(255, 255, 255, 0));
-    position: relative;
-    line-height: 63px;
-    transition: .5s;
+    background: linear-gradient(50deg, orange, transparent);
 }
-
 .cover-6::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 166, 0, 0.723);
-    transition: .5s;
-    transform: scale(.9);
-    z-index: -1;
+    background: rgba(255, 166, 0, 0.72);
 }
-
 .cover-6:hover::before {
     transform: scale(1.1);
-    box-shadow: 0 0 15px rgba(255, 166, 0, 0.723);
+    box-shadow: 0 0 5px rgba(255, 166, 0, 0.72);
 }
 
 .cover-7 {
-    background: linear-gradient(50deg, rgb(128, 128, 128), rgba(255, 255, 255, 0));
-    position: relative;
-    line-height: 63px;
-    transition: .5s;
+    background: linear-gradient(50deg, gray, transparent);
 }
-
 .cover-7::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(128, 128, 128, 0.814);
-    transition: .5s;
-    transform: scale(.9);
-    z-index: -1;
+    background: rgba(128, 128, 128, 0.81);
 }
-
 .cover-7:hover::before {
     transform: scale(1.1);
-    box-shadow: 0 0 15px rgba(128, 128, 128, 0.814);
+    box-shadow: 0 0 5px rgba(128, 128, 128, 0.81);
 }
 
-.cover-8  {
-    background: linear-gradient(50deg, rgb(0, 0, 255), rgba(255, 255, 255, 0));
-    position: relative;
-    line-height: 63px;
-    transition: .5s;
+.cover-8 {
+    background: linear-gradient(50deg, blue, transparent);
 }
-
-
 .cover-8::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     background: #002afcb5;
-    transition: .5s;
-    transform: scale(.9);
-    z-index: -1;
 }
-
 .cover-8:hover::before {
     transform: scale(1.1);
-    box-shadow: 0 0 15px #002afcb5;
+    box-shadow: 0 0 5px #002afcb5;
+}
+
+/* muspekaren blir en hand när man hovrar över en bok eller sökknapp */
+.cover:hover {
+    cursor: pointer;
 }
