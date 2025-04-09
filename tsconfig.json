@@ -1,8 +1,10 @@
-
 {
   "compilerOptions": {
-      "target": "ES6",
-      "outDir": "./dist"
+    "target": "ES6",
+    "outDir": "./dist/js",  // Se till att rätt mapp är inställd
+    "module": "ES6",
+    "moduleResolution": "Node",
+    "esModuleInterop": true
   },
   "include": ["./src"],
   "exclude": []
