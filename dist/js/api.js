@@ -7,16 +7,15 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-const API_URL = "https://my-json-server.typicode.com/zocom-christoffer-wallenberg/books-api/books";
+const apiUrl = "https://my-json-server.typicode.com/zocom-christoffer-wallenberg/books-api/books";
 export function fetchBooks() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const response = yield fetch(API_URL);
+            const response = yield fetch(apiUrl);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             const books = yield response.json();
-            console.log('Fetched books:', books); // Lägg till denna logg för att se om böckerna hämtas korrekt
             return books;
         }
         catch (error) {
