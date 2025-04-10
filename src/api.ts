@@ -6,15 +6,14 @@ const API_URL = "https://my-json-server.typicode.com/zocom-christoffer-wallenber
 export async function fetchBooks(): Promise<Book[]> {
     try {
         const response = await fetch(API_URL);
-
+        
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
-
+        
         const books = await response.json() as Book[];
-        console.log('Fetched books:', books); // Lägg till denna logg för att se om böckerna hämtas korrekt
         return books;
-
+        
     } catch (error) {
         console.error('Failed to fetch books:', error);
         throw error;

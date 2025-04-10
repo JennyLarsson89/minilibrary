@@ -175,14 +175,14 @@ p {
     z-index: -1;
 }
 
+
+
 /* böckernas färgtema */
 .cover-1 {
     background: linear-gradient(50deg, rgb(131, 25, 231), transparent);
 }
-.cover-1::before {
-    background: rgba(131, 25, 231, 0.75);
-}
-.cover-1:hover::before {
+
+.cover-1:hover {
     transform: scale(1.1);
     box-shadow: 0 0 5px rgba(131, 25, 231, 0.75);
 }
@@ -190,10 +190,8 @@ p {
 .cover-2 {
     background: linear-gradient(50deg, brown, transparent);
 }
-.cover-2::before {
-    background: rgba(165, 42, 42, 0.79);
-}
-.cover-2:hover::before {
+
+.cover-2:hover {
     transform: scale(1.1);
     box-shadow: 0 0 5px rgba(165, 42, 42, 0.79);
 }
@@ -201,10 +199,8 @@ p {
 .cover-3 {
     background: linear-gradient(50deg, red, transparent);
 }
-.cover-3::before {
-    background: rgba(255, 0, 0, 0.74);
-}
-.cover-3:hover::before {
+
+.cover-3:hover {
     transform: scale(1.1);
     box-shadow: 0 0 5px rgba(255, 0, 0, 0.74);
 }
@@ -212,10 +208,8 @@ p {
 .cover-4 {
     background: linear-gradient(50deg, lime, transparent);
 }
-.cover-4::before {
-    background: rgba(0, 255, 38, 0.62);
-}
-.cover-4:hover::before {
+
+.cover-4:hover {
     transform: scale(1.1);
     box-shadow: 0 0 5px rgba(0, 255, 38, 0.62);
 }
@@ -223,10 +217,8 @@ p {
 .cover-5 {
     background: linear-gradient(50deg, yellow, transparent);
 }
-.cover-5::before {
-    background: rgba(255, 255, 0, 0.7);
-}
-.cover-5:hover::before {
+
+.cover-5:hover {
     transform: scale(1.1);
     box-shadow: 0 0 5px rgba(255, 255, 0, 0.7);
 }
@@ -234,10 +226,8 @@ p {
 .cover-6 {
     background: linear-gradient(50deg, orange, transparent);
 }
-.cover-6::before {
-    background: rgba(255, 166, 0, 0.72);
-}
-.cover-6:hover::before {
+
+.cover-6:hover {
     transform: scale(1.1);
     box-shadow: 0 0 5px rgba(255, 166, 0, 0.72);
 }
@@ -245,10 +235,8 @@ p {
 .cover-7 {
     background: linear-gradient(50deg, gray, transparent);
 }
-.cover-7::before {
-    background: rgba(128, 128, 128, 0.81);
-}
-.cover-7:hover::before {
+
+.cover-7:hover {
     transform: scale(1.1);
     box-shadow: 0 0 5px rgba(128, 128, 128, 0.81);
 }
@@ -256,12 +244,10 @@ p {
 .cover-8 {
     background: linear-gradient(50deg, blue, transparent);
 }
-.cover-8::before {
-    background: #002afcb5;
-}
-.cover-8:hover::before {
+
+.cover-8:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 5px #002afcb5;
+    box-shadow: 0 0 5px rgba(0, 0, 255, 0.74);
 }
 
 /* muspekaren blir en hand när man hovrar över en bok eller sökknapp */
