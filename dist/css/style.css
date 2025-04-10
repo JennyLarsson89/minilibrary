@@ -17,6 +17,7 @@ body {
     min-height: 100vh;
 }
 
+
 h1 {
     margin: 1em 0;
     grid-column: 1 / -1;
@@ -183,7 +184,6 @@ p {
 }
 
 .cover-1:hover {
-    transform: scale(1.1);
     box-shadow: 0 0 5px rgba(131, 25, 231, 0.75);
 }
 
@@ -192,7 +192,6 @@ p {
 }
 
 .cover-2:hover {
-    transform: scale(1.1);
     box-shadow: 0 0 5px rgba(165, 42, 42, 0.79);
 }
 
@@ -201,7 +200,6 @@ p {
 }
 
 .cover-3:hover {
-    transform: scale(1.1);
     box-shadow: 0 0 5px rgba(255, 0, 0, 0.74);
 }
 
@@ -210,7 +208,6 @@ p {
 }
 
 .cover-4:hover {
-    transform: scale(1.1);
     box-shadow: 0 0 5px rgba(0, 255, 38, 0.62);
 }
 
@@ -219,7 +216,6 @@ p {
 }
 
 .cover-5:hover {
-    transform: scale(1.1);
     box-shadow: 0 0 5px rgba(255, 255, 0, 0.7);
 }
 
@@ -228,7 +224,6 @@ p {
 }
 
 .cover-6:hover {
-    transform: scale(1.1);
     box-shadow: 0 0 5px rgba(255, 166, 0, 0.72);
 }
 
@@ -237,7 +232,6 @@ p {
 }
 
 .cover-7:hover {
-    transform: scale(1.1);
     box-shadow: 0 0 5px rgba(128, 128, 128, 0.81);
 }
 
@@ -246,11 +240,11 @@ p {
 }
 
 .cover-8:hover {
-    transform: scale(1.1);
     box-shadow: 0 0 5px rgba(0, 0, 255, 0.74);
 }
 
 /* muspekaren blir en hand när man hovrar över en bok eller sökknapp */
 .cover:hover {
     cursor: pointer;
+    transform: scale(1.05);
 }
