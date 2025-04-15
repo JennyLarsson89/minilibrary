@@ -274,8 +274,29 @@ p {
     width: 100%;
 }
 
+.back-button {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    left: 0;
+    margin-left: 25px;
+    transition: 0.2s;
+}
+
+.back-button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    transition: 0.2s;
+}
+
+.arrow {
+    width: auto;
+    height: 30px;
+}
+
 .overlay-container {
-    border: 2px solid red;
     width: 1400px;
     height: 800px;
     display: flex;
@@ -284,15 +305,39 @@ p {
 
 .book-container {
     width: 650px;
-    background-color: blue;
+    background-color: rgba(111, 207, 151, 1);
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+}
+
+.book-seam {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    width: 5px;
+    margin-left: 40px;
+    left: 0;
+}
+
+.book-title {
+    font-size: 50px;
+    color: rgb(40, 40, 40);
+}
+
+.book-author {
+    font-size: 25px;
+    margin-right: 230px;
+    margin-bottom: 70px;
 }
 
 .text-container {
     width: 650px;
-    background-color: green;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
 }
 
 .text-title {
@@ -304,10 +349,53 @@ p {
 }
 
 .text-author {
-    color: white;
+    color: rgba(255, 255, 255, 0.795);
     margin: 0;
     font-size: 20px;
     width: 100%;
     margin-bottom: 50px;
 }
 
+.text-plot {
+    color: rgb(245, 245, 245);
+    max-width: 70%;
+    font-size: 17px;
+}
+
+.book-facts-container {
+    background-color: rgb(55, 55, 55);
+    width: 70%;
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 80px;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.book-fact {
+    width: 50%;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.non-bold {
+    font-weight: 400;
+}
+
+.read-button {
+    border: none;
+    width: 30%;
+    height: 60px;
+    font-weight: bold;
+    font-size: 17px;
+    border-radius: 5px;
+    margin-top: 25px;
+}
+
+.read-button:hover {
+  font-size: 18px;
+  transition: 0.2s;
+}
