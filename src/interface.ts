@@ -7,4 +7,5 @@ export interface Book {
     pages: number;
     plot: string;
     audience: string;
+    color: string;
 }

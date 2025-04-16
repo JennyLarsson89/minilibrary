@@ -97,6 +97,16 @@ p {
     transition: all 0.3s ease;
 }
 
+.small-book-seam {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background-color: rgba(0, 0, 0, 0.4);
+    margin-left: 8px;
+}
+
 .cover p {
     font-size: 0.9em;
     line-height: 1.4;
@@ -185,73 +195,6 @@ p {
     z-index: -1;
 }
 
-
-
-/* böckernas färgtema */
-.cover-1 {
-    background: linear-gradient(50deg, rgb(131, 25, 231), transparent);
-}
-
-.cover-1:hover {
-    box-shadow: 0 0 5px rgba(131, 25, 231, 0.75);
-}
-
-.cover-2 {
-    background: linear-gradient(50deg, brown, transparent);
-}
-
-.cover-2:hover {
-    box-shadow: 0 0 5px rgba(165, 42, 42, 0.79);
-}
-
-.cover-3 {
-    background: linear-gradient(50deg, red, transparent);
-}
-
-.cover-3:hover {
-    box-shadow: 0 0 5px rgba(255, 0, 0, 0.74);
-}
-
-.cover-4 {
-    background: linear-gradient(50deg, lime, transparent);
-}
-
-.cover-4:hover {
-    box-shadow: 0 0 5px rgba(0, 255, 38, 0.62);
-}
-
-.cover-5 {
-    background: linear-gradient(50deg, yellow, transparent);
-}
-
-.cover-5:hover {
-    box-shadow: 0 0 5px rgba(255, 255, 0, 0.7);
-}
-
-.cover-6 {
-    background: linear-gradient(50deg, orange, transparent);
-}
-
-.cover-6:hover {
-    box-shadow: 0 0 5px rgba(255, 166, 0, 0.72);
-}
-
-.cover-7 {
-    background: linear-gradient(50deg, gray, transparent);
-}
-
-.cover-7:hover {
-    box-shadow: 0 0 5px rgba(128, 128, 128, 0.81);
-}
-
-.cover-8 {
-    background: linear-gradient(50deg, blue, transparent);
-}
-
-.cover-8:hover {
-    box-shadow: 0 0 5px rgba(0, 0, 255, 0.74);
-}
-
 /* muspekaren blir en hand när man hovrar över en bok eller sökknapp */
 .cover:hover {
     cursor: pointer;
@@ -307,10 +250,6 @@ p {
     width: 650px;
     background-color: rgba(111, 207, 151, 1);
     position: relative;
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
-    align-items: center;
 }
 
 .book-seam {
@@ -325,12 +264,20 @@ p {
 .book-title {
     font-size: 50px;
     color: rgb(40, 40, 40);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-left: 50px;
+    margin-bottom: 100px;
 }
 
 .book-author {
     font-size: 25px;
-    margin-right: 230px;
-    margin-bottom: 70px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-left: 50px;
+    margin-bottom: 65px;
 }
 
 .text-container {
